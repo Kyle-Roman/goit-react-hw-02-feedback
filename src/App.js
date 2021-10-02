@@ -1,4 +1,4 @@
-import Feedback from './components/Feddback/Feedback'
+import Feedback from './components/Feedback/Feedback'
 import './App.css';
 
 function App() {
