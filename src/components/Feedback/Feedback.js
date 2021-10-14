@@ -14,20 +14,17 @@ class Feedback extends Component {
         bad: 0
     };
     
-    options = Object.keys(this.state);
-    
+    options = Object.keys(this.state);    
   
-    onLeaveFeedback = (event) => {        
-        const clickedBtn = event.currentTarget.textContent;
-
+    onLeaveFeedback = (clickedBtn) => {
       this.setState((prevState) => ({         
           [clickedBtn]: prevState[clickedBtn] + 1      
       }));
     }
 
-  countTotalFeedback = () => {
-      return this.state.good + this.state.neutral + this.state.bad;
-    }
+    countTotalFeedback = () => {
+        return this.state.good + this.state.neutral + this.state.bad;
+      }
   
     countPositiveFeedbackPercentage = () => {
       return Math.round((this.state.good / this.countTotalFeedback()) * 100);

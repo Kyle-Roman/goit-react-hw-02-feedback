@@ -9,9 +9,8 @@ export default function ButtonSet({options, onClick}) {
         key={option}
         type="button"
         className={s.button}        
-        onClick={onClick}
-      >
-        {option}
+        onClick={() => {onClick(option)}}
+        >{option}
       </button>
     ))}
     </div>
